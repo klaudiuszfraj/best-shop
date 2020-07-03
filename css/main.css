@@ -100,3 +100,70 @@ main{
 .main__banner img{
     margin-top: -30px;
 }
+/*statiscic*/
+.statiscic{
+    height: 531px;
+    box-shadow: 0 -5px 80px #00000029;
+}
+.statiscic__content{
+    padding: 100px 0 0 121px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.statiscic__content > h1{
+    font-size: 36px;
+    margin-bottom: 120px;
+}
+.statiscic__content > .boxes{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 168px;
+}
+.box img{
+    position: relative;
+    left: -15px;
+}
+.box > span{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.box > span::before {
+    content: "";
+    background-color: var(--color-redish);
+    width: 62px ;
+    height: 62px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+}
+/*todo :: da sie zaznaczyc te spant za pomoca selektorów?*/
+/*.boxes span:nth-child(2){*/
+/*    background-color: var(--color-primary);*/
+/*}*/
+.box .span_bg1::before{
+    background-color: var(--color-primary);
+}
+.box .span_bg2::before{
+    background-color: var(--color-green);
+}
+.box > h2{
+    margin: 22px 0;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 6px;
+}
+.box > p{
+    color: var(--color-grey);
+    text-align: center;
+}
