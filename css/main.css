@@ -362,3 +362,122 @@ main{
 .pricing__option:nth-child(2) .price{
     color: var(--color-primary);
 }
+/*questions*/
+.question{
+    min-height: 400px;
+}
+.question__content{
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.question__content div{
+    width: 30%;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contact h3{
+    font-size: 49px;
+}
+.contact > p{
+    padding: 30px 0;
+}
+.contact div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact div p{
+    display: flex;
+    align-items: center;
+    color: var(--color-grey);
+}
+.contact div p::before
+{
+    display: inline-flex;
+    content: "";
+    width: 27px;
+    height: 27px;
+    background-image: url("../images/Mail Icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    left: -10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form div{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+form label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3.2px;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+form div > input{
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #95989A;
+    margin: 10px 0;
+}
+form div > label[for="checkbox"] {
+    color: #707070;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding-left: 20px;
+    text-transform: none;
+    position: relative;
+}
+form div > label[for="checkbox"] input{
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+form div > label[for="checkbox"] span::before {
+    display: flex;
+    content: "";
+    height: 24px;
+    width: 24px;
+    border: 1px solid #95989A;
+    border-radius: 4px;
+    position: absolute;
+    left: -13px;
+}
+input[type="checkbox"]:checked + span::before{
+    background-image: url("../images/Ckechmark-1.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+.form a{
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+    padding: 20px 97px;
+    background-color: var(--color-primary);
+    border-radius: 35px;
+    margin-top: 30px;
+    align-self: flex-end;
+}
