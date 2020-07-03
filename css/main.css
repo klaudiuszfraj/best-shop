@@ -54,7 +54,6 @@ nav{
     align-items: center;
 }
 nav > a{
-    margin-left: 95px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-decoration: none;
@@ -62,8 +61,7 @@ nav > a{
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 3.28px;
-    height: 100%;
-    align-self: center;
+    padding: calc(59px / 2) 40px;
 }
 /*todo nid działa podswietlenie linków na dole*/
 nav > a:hover{
@@ -277,4 +275,90 @@ main{
 .benefit__row:last-child .benefit__box:last-child {
     padding: 0;
     align-self: stretch;
+}
+/*pricing*/
+.pricing__content{
+    margin-top: 100px;
+    font-size: 36px;
+    text-align: center;
+}
+.pricing__options{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    align-items: center;
+    text-align: center;
+}
+.pricing__option{
+    border: 1px solid var(--color-redish);
+    padding: 35px 60px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+}
+.pricing__option h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.pricing__option .price{
+    padding: 14px;
+    font-size: 46px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-redish);
+}
+.pricing__option .additional--info{
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #13253B;
+    min-height: 12px
+}
+.pricing__option p,
+.pricing__option li{
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pricing__option li.correct::before{
+    content: "";
+    width: 11px;
+    height: 11px;
+    /*border: 2px solid var(--color-green);*/
+    margin-right: 0.5em;
+    background-image: url("../images/Ckechmark-1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pricing__option li.correct.false::before{
+    background-image: url("../images/Close.svg");
+}
+.pricing__option a{
+    padding: 16px 57px;
+    background-color: var(--color-redish);
+    border-radius: 23px;
+    color: var(--color-white);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    bottom: -22px;
+    align-self: center;
+}
+.pricing__option:nth-child(2){
+    border-color: var(--color-primary);
+    box-shadow: 5px 10px 27px #07ACE629;
+    padding: 60px 80px;
+}
+.pricing__option:nth-child(2) a {
+    background-color: var(--color-primary);
+}
+.pricing__option:nth-child(2) .price{
+    color: var(--color-primary);
 }
