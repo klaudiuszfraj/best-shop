@@ -27,7 +27,7 @@
   max-width: 380px;
   @include mobile{
     max-width: 100%;
-    padding: 30px 80px;
+    padding: 0;
   }
 }
 .benefit__box > h2{
@@ -108,6 +108,7 @@
   flex-direction: row;
   @include mobile{
     border: 1px solid #E8E9ED;
+    flex-direction: column;
   }
 }
 .benefit__row:last-child .benefit__box:first-child{
