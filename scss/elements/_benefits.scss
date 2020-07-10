@@ -13,7 +13,7 @@
   flex-direction: row;
   margin: 30px;
   border: 1px solid #E8E9ED;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 80%;
   align-items: center;
   background-color: $color-white;
@@ -105,7 +105,7 @@
 .benefit__row:last-child{
   background: $color-light-grey;
   border: none;
-  flex-direction: column;
+  flex-direction: row;
   @include mobile{
     border: 1px solid #E8E9ED;
   }
