@@ -11,3 +11,14 @@ $main-font: 'Raleway', sans-serif;
 //[300, 400, 700, 800];
 $secondary-font: 'Open Sans', sans-serif;
 //[300, 400, 700];
+@mixin container-under-1351px {
+  @media screen and (max-width: 1351px){
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+@mixin mobile {
+  @media screen and(max-width: 600px){
+    @content
+  }
+}

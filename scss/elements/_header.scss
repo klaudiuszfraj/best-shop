@@ -2,35 +2,73 @@ header{
   height: 70px;
   box-shadow: 0 3px 6px #00000029;
   margin-bottom: 130px;
+  .header__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
 }
-.header__content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-.logo > p{
-  font-size: 32px;
-  color: $color-primary;
-  font-weight: 300;
+.logo{
+  > p{
+    font-size: 32px;
+    color: $color-primary;
+    font-weight: 300;
+  }
 }
 nav{
   display: flex;
   height: 100%;
   align-items: center;
+  @include mobile{
+    //todo : dispaly none usunac
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 70px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: 0 3px 6px #00000029;
+  }
+  > a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-grey;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 3.28px;
+    padding: calc(59px / 2) 40px;
+    @include mobile{
+      padding: 14px 25px;
+    }
+    &:hover{
+      color: $color-black;
+      border-bottom: 4px solid $color-primary;
+      @include mobile{
+        border-bottom: none;
+
+      }
+    }
+  }
 }
-nav > a{
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: $color-grey;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 3.28px;
-  padding: calc(59px / 2) 40px;
-}
-/*todo nid działa podswietlenie linków na dole*/
-nav > a:hover{
-  color: $color-black;
-  border-bottom: 4px solid $color-primary;
+.hamburger{
+  display: none;
+  @include mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.5rem;
+
+    .hamburger__row{
+      width: 50px;
+      height: 4px;
+      background-color: $color-primary;
+      border-radius: 2px;
+    }
+  }
 }
