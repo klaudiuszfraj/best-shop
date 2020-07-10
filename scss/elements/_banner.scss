@@ -1,0 +1,29 @@
+main{
+height: 712px;
+}
+.main__banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__banner > h1{
+  font-size: 49px;
+  color: $color-black;
+  margin-bottom: 20px;
+}
+.main__banner > p{
+  font-family: 'Open Sans', sans-serif;
+  color: $color-black;
+  margin-bottom: 38px;
+}
+.main__banner > a{
+  padding: 22px 157px;
+  color: $color-white;
+  background-color: $color-primary;
+  box-shadow: 5px 10px 14px #07ACE629;
+  border-radius: 40px;
+}
+.main__banner img{
+  margin-top: -30px;
+}
