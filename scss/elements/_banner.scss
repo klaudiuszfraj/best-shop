@@ -24,6 +24,12 @@ height: 712px;
   box-shadow: 5px 10px 14px #07ACE629;
   border-radius: 40px;
 }
+//todo : jak zmnniejszyc obraz nadajac mu wysokość?
 .main__banner img{
   margin-top: -30px;
+  @include mobile{
+    object-fit: cover;
+    margin-top: 0;
+    height: 300px;
+  }
 }

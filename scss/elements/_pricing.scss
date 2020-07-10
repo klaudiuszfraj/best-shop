@@ -10,6 +10,9 @@
   margin-bottom: 100px;
   align-items: center;
   text-align: center;
+  @include mobile{
+    flex-direction: column;
+  }
 }
 .pricing__option{
   border: 1px solid $color-redish;
@@ -19,6 +22,9 @@
   flex-direction: column;
   position: relative;
   width: 20%;
+  @include mobile{
+    width: 70%;
+  }
 }
 .pricing__option h3{
   font-size: 20px;

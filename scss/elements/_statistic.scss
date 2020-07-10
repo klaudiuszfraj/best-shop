@@ -1,5 +1,5 @@
 .statistic{
-  height: 531px;
+  //height: 531px;
   box-shadow: 0 -5px 80px #00000029;
 }
 .statistic__content{
@@ -8,16 +8,26 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @include mobile{
+  text-align: center;
+  }
 }
 .statistic__content > h1{
   font-size: 36px;
   margin-bottom: 120px;
+  @include mobile{
+    margin-bottom: 20px;
+    padding: 0  40px;
+  }
 }
 .statistic__content > .boxes{
   width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @include mobile{
+    flex-direction: column;
+  }
 }
 .box{
   display: flex;
@@ -25,6 +35,9 @@
   justify-content: space-around;
   align-items: center;
   max-width: 168px;
+  @include mobile{
+    margin: 20px 0;
+  }
 }
 .box img{
   position: relative;

@@ -17,10 +17,18 @@
   width: 80%;
   align-items: center;
   background-color: $color-white;
+  @include mobile{
+    flex-direction: column-reverse;
+    padding: 50px;
+  }
 }
 .benefit__box{
   padding: 30px;
   max-width: 380px;
+  @include mobile{
+    max-width: 100%;
+    padding: 30px 80px;
+  }
 }
 .benefit__box > h2{
   font-size: 36px;
@@ -36,11 +44,17 @@
   width: 80%;
   display: inline-block;
   margin-top: 50px;
+  @include mobile{
+    display: none;
+  }
 }
 .benefit__box img{
   width: 80%;
   position: relative;
   z-index: 1;
+  @include mobile{
+    position: initial;
+  }
 }
 .benefit__box span.macbook--bg img{
   left: -100px;
@@ -62,8 +76,18 @@
   position: absolute;
   border-radius: 40px;
 }
+@include mobile {
+  .benefit__box span.macbook--bg::after {
+    right: 0px;
+  }
+}
+
+
 .benefit__row:nth-child(2){
   flex-direction: row-reverse;
+  @include mobile{
+    flex-direction: column-reverse;
+  }
 }
 .benefit__box span.iphone--bg::after{
   border-radius: 50%;
@@ -81,11 +105,19 @@
 .benefit__row:last-child{
   background: $color-light-grey;
   border: none;
+  flex-direction: column;
+  @include mobile{
+    border: 1px solid #E8E9ED;
+  }
 }
 .benefit__row:last-child .benefit__box:first-child{
   background-color: $color-white;
   border: 1px solid #E8E9ED;
   max-width: 55%;
+  @include mobile{
+    max-width: 100%;
+    border: none;
+  }
 }
 .trumpet p::after{
   background-color: $color-green;
@@ -107,4 +139,7 @@
 .benefit__row:last-child .benefit__box:last-child {
   padding: 0;
   align-self: stretch;
+  @include mobile{
+    align-self: center;
+  }
 }
