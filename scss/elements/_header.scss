@@ -6,6 +6,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: $color-white;
     height: 100%;
   }
 }
@@ -20,9 +21,10 @@ nav{
   display: flex;
   height: 100%;
   align-items: center;
+  transition: 2s;
   @include mobile{
-    //todo : dispaly none usunac
-    display: none;
+    //todo : dlaczego nie moge showac listy z linkami pod header za pomoca z-index
+    transform: translateY(-300px) scale(0);
     position: absolute;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,6 +35,9 @@ nav{
     width: 100%;
     background-color: $color-white;
     box-shadow: 0 3px 6px #00000029;
+    &.clicked{
+    transform: translateY(0) scale(1);
+    }
   }
   > a{
     font-family: 'Open Sans', sans-serif;
@@ -56,6 +61,7 @@ nav{
     }
   }
 }
+
 .hamburger{
   display: none;
   @include mobile{
@@ -63,12 +69,25 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     height: 1.5rem;
-
     .hamburger__row{
       width: 50px;
       height: 4px;
       background-color: $color-primary;
       border-radius: 2px;
+      transition: 2s;
     }
+    &.clicked{
+      .hamburger__row-2{
+        opacity: 0;
+        transform: scale(0);
+      }
+      .hamburger__row-1{
+        transform: translateY(10px) rotate(45deg);
+      }
+      .hamburger__row-3{
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  ;
   }
 }
