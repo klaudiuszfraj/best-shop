@@ -23,6 +23,10 @@
   position: relative;
   @include mobile{
     margin-bottom: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px;
   }
 }
 .pricing__option h3{
@@ -42,6 +46,9 @@
   font-size: 12px;
   color: #13253B;
   min-height: 32px;
+  @include mobile{
+    margin: 0;
+  }
 }
 .pricing__option p,
 .pricing__option li{
@@ -51,6 +58,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.pricing__option{
+  li{
+    @include mobile{
+      justify-content: flex-start;
+    }
+  }
 }
 .pricing__option li.correct::before{
   content: "";
@@ -80,6 +94,10 @@
   border-color: $color-primary;
   box-shadow: 5px 10px 27px #07ACE629;
   padding: 60px 80px;
+  @include mobile{
+    padding: 100px 12px;
+  }
+
 }
 .pricing__option:nth-child(2) a {
   background-color: $color-primary;
