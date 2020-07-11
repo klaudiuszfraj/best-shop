@@ -19,7 +19,10 @@
   background-color: $color-white;
   @include mobile{
     flex-direction: column-reverse;
-    padding: 50px;
+    margin: 15px;
+    padding: 15px;
+    padding-top: 30px;
+    width: 100%;
   }
 }
 .benefit__box{
@@ -79,6 +82,8 @@
 @include mobile {
   .benefit__box span.macbook--bg::after {
     right: 0px;
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -94,6 +99,10 @@
   background-color: $color-primary;
   width: 220px;
   height: 220px;
+  @include mobile{
+  width: 150px;
+  height: 150px;
+  }
 }
 .benefit__box span.iphone--bg img{
   left: 50px;
@@ -109,6 +118,7 @@
   @include mobile{
     border: 1px solid #E8E9ED;
     flex-direction: column;
+    padding: 0;
   }
 }
 .benefit__row:last-child .benefit__box:first-child{
@@ -118,6 +128,7 @@
   @include mobile{
     max-width: 100%;
     border: none;
+    padding: 15px;
   }
 }
 .trumpet p::after{
@@ -136,6 +147,10 @@
 .benefit__box span.trumpet--bg img{
   left: 0;
   top: 30px;
+  @include mobile{
+    margin-top: 40px;
+  //  todo : dlaczego zmiana top nic nie daje?
+  }
 }
 .benefit__row:last-child .benefit__box:last-child {
   padding: 0;
