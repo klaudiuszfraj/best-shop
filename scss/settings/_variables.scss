@@ -22,3 +22,8 @@ $secondary-font: 'Open Sans', sans-serif;
     @content
   }
 }
+@mixin tablet {
+  @media screen and (max-width: 800px){
+    @content
+  }
+}

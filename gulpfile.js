@@ -23,10 +23,8 @@ function watcher(done) {
     browserSync.init({
         server: "./" + entryPath + "/"
     });
-    gulp.watch(
-        "./" + entryPath + "/scss/**/*.scss",
-        gulp.series(compileSass, reload)
-    );
+    gulp.watch("./" + entryPath + "/scss/**/*.scss",gulp.series(compileSass, reload));
+    gulp.watch(entryPath + "/js/*.js",gulp.series(compileSass, reload));
     gulp.watch("./" + entryPath + "/*.html", gulp.series(reload));
 }
 exports.default = gulp.parallel(compileSass, watcher);
