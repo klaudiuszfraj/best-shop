@@ -1,2 +1,2 @@
 # best-shop
-HTML/CSS simple site, desktop only
+HTML/CSS simple site, desktop and mobile under 600px
