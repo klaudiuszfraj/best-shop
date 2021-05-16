@@ -727,6 +727,10 @@ main {
   left: -10px;
 }
 
+.contact div p:last-child::before {
+  background-image: url("../../images/Phone Icon.svg");
+}
+
 .form {
   display: flex;
   flex-direction: column;
